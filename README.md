@@ -1,20 +1,22 @@
 # UI
 
 <details>
-<summary>프로젝트 세팅</summary>
+<summary>Boilerplate</summary>
 <div markdown="1">
 
 ## 1. 설치 플러그인
-| Plugin | URL |
-| ------ | ------ |
-| 1. 설치파일 | 
-| Figma | https://www.figma.com/downloads/ |
-| VSCode | https://code.visualstudio.com/download |
-| Figma시안 | https://drive.google.com/file/d/1OJuWQ8UnZZv8GEmA5ihhqbgVBhrHoxAh/view |
-| Git | https://git-scm.com/downloads |
-| Git 설치방법 | https://www.youtube.com/watch?v=JKT9laOAPIs |
+
+| Plugin       | URL                                                                    |
+| ------------ | ---------------------------------------------------------------------- |
+| 1. 설치파일  |
+| Figma        | https://www.figma.com/downloads/                                       |
+| VSCode       | https://code.visualstudio.com/download                                 |
+| Figma시안    | https://drive.google.com/file/d/1OJuWQ8UnZZv8GEmA5ihhqbgVBhrHoxAh/view |
+| Git          | https://git-scm.com/downloads                                          |
+| Git 설치방법 | https://www.youtube.com/watch?v=JKT9laOAPIs                            |
 
 ## 2. 익스텐션
+
 - scss-lint
 - Live Server
 - Gitmoji
@@ -22,6 +24,7 @@
 - Material Icon Theme
 
 ## 3. 노드설치
+
 - Node LTS 버전
   - Long Term Support : 장기 지원 버전
   - 큰 버그 없이 무난하게 안정적으로 사용할 수 있는 버전
@@ -34,6 +37,7 @@
   - 옵션
     - -w: scss 실시간 코드 변경 감지
     - -r: 다중파일 감지
+
 ```sh
 // 01) packge.json 파일 생성(필요한 노드모듈 다운받고 사용가능한 파일)
 npm init -y
@@ -42,7 +46,7 @@ npm init -y
 npm i node-sass
 
 // 03) (package.json)
-script > "node-sass": "node-sass" 
+script > "node-sass": "node-sass"
 
 // 04) node-sass 실행
 npm run node-sass
@@ -59,5 +63,26 @@ script > "sass": "node-sass [options] <input> <output>"
   >  "sass": "node-sass -w -r styles/main.scss ./style.css"
   or  "sass": "node-sass -wr styles/main.scss ./style.css"
 ```
+
+## 4. linter 설정
+
+### 1) SCSS lint
+
+- 일관성 있게 코드를 작성할 수 있도록 도와주는 도구
+- 문법적인 실수나 정의한 규칙에 어긋날 경우 자동으로 수정(Automatic Fix)할 수 있게 함
+- 익스텐션 scss-lint가 .scss-lint.yml의 규칙대로 코드가 쓰일 수 있도록 도와줌
+
+※ Github > your gist: 코드 단위를 저장할 수 있는 곳으로 자주사용하는 설정이나 코드를 저장할 수 있음
+
+### 2) Prittier lint
+
+- .prettierrc 파일 생성
+- VS Code Settings(ctrl + ,)
+  - 검색어: format on save > Editor: Format On Save > 체크
+  - 검색처: prettier config > Prettier: Require Config > 체크
+- Open Setting JSON 설정
+  - VS Code Settings > 문서아이콘(Open Settings)
+  - "editor.defaultFormatter": "esbenp.prettier-vscode"
+
 </div>
 </details>
