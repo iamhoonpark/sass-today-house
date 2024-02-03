@@ -90,17 +90,20 @@ script > "sass": "node-sass [options] <input> <output>"
 </details>
 
 <details>
-<summary>Sass</summary>
+<summary>Asset</summary>
 <div markdown="1">
 
-# Sass(Syntactically awesome stylesheet)
+# Sass
 
-## 1. 개요
-
+- Syntactically awesome stylesheet
 - CSS Preprocessor: Sass, less, PostCss, stylus 등 CSS의 문제점들을 Programmatically 한 방식
-
 - Sass와 SCSS는 문법의 차이며 같은 회사에서 css 전처리기로 해석되어 css로 컴파일되는 스크립트 언어
 - SCSS는 Sass의 3버전에서 등장한 언어이며 퍼블리셔에게 익숙한 css와 비슷한 구문을 가지고 있으며 Sass 기능을 지원하되, css와 거의 같은 문법으로 사용된다는 점에서 퍼블리셔에게 각광받는 언어
+
+# HTML Document 셋업
+
+- html lang="ko" : 한국어
+- meta content="width=device-width : 반응형 가능
 
 </div>
 </details>
