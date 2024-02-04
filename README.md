@@ -93,7 +93,7 @@ script > "sass": "node-sass [options] <input> <output>"
 <summary>Asset</summary>
 <div markdown="1">
 
-# Sass
+# Sass 개요
 
 - Syntactically awesome stylesheet
 - CSS Preprocessor: Sass, less, PostCss, stylus 등 CSS의 문제점들을 Programmatically 한 방식
@@ -104,6 +104,40 @@ script > "sass": "node-sass [options] <input> <output>"
 
 - html lang="ko" : 한국어
 - meta content="width=device-width : 반응형 가능
+
+# 이미지
+
+- vector image : 일러스트 = svg 파일로 권장
+- raster image : 픽셀기반 = jpg, png 등
+
+  1. jpg
+
+  - 투명배경 지원하지 않음
+  - 파일 압축이 잘 되어 용량이 낮음 → 퍼포먼스에 좋음
+  - 그러나 많이 압축되어 있다는 것은 이미지의 퀄리티가 상대적으로 낮음
+
+  2. png
+
+  - 투명배경 지원함
+  - 퀄리티 로스가 별로 없지만 용량이 큼
+
+  3. webp
+
+  - 구글에서 제작한 웹을 위한 이미지포맷
+  - png보다 26% 적은 용량과 jpg보다 25~34% 덜 손상
+  - png와 jpg 장점을 섞음
+  - 그러나 현재 많은 보급이 되지 않고 구형 브라우저는 wepb를 지원하지 않음
+
+- 구글 통계상 하나의 웹사이트 리소스 중 용량의 60~65%가 이미지 파일이 차지
+- 이미지가 많을 경우 로드되는데 시간이 많이 걸림(=사용성이 좋지 않음)
+- 프론트엔드 개발자는 퍼포먼스에 해가 되지 않는 이미지파일을 적절하게 사용해야 사용자 경험이 올라감
+- 퍼포먼스를 우선시 할 것인지, 퀄리티를 우선시할 것인지 판단을 해야 함(apple.com 등 잘 만들어진 웹서비스를 참고)
+- 아이콘 같이 사이즈가 얼마가 되든 간에 깨끗한 화질을 원하는 이미지는 svg으로 export, png나 jpg로 할 경우는 필셀화(비트맵이미지)되어 버림
+- 작은 사이즈를 할 것이라면 = bitmap
+- 큰 사이즈를 할 것이라면 = svg
+- 대개 logo, icon 등은 svg(단, ie 6,7,8을 응대한다면 해당안됨)
+
+![](./lib/vector_bitmap_file_size.png)
 
 </div>
 </details>
