@@ -139,5 +139,9 @@ script > "sass": "node-sass [options] <input> <output>"
 
 ![](./lib/vector_bitmap_file_size.png)
 
+# 피그마 단축키
+
+- ctrl + R : 선택한 asset 파일명 수정U
+
 </div>
 </details>
