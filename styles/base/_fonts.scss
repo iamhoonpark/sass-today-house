@@ -1,7 +1,13 @@
+// scss-lint:disable all
+// 해당 파일은 assets의 icon을 fonts로 변형시킨 것에 대한 CSS를 가져온 파일이므로 scss-lint를 적용하지 않겠다는 선언
 @font-face {
   font-family: 'tomorrow';
-  src: url("./assets/fonts/tomorrow.eot");
-  src: url("./assets/fonts/tomorrow.eot#iefix") format("embedded-opentype"), url("./assets/fonts/tomorrow.ttf") format("truetype"), url("./assets/fonts/tomorrow.woff") format("woff"), url("./assets/fonts/tomorrow.svg#tomorrow") format("svg");
+  // sass의 src - url경로는 styles.css를 기준으로 함(sass를 렌더해서 css으로 변환해서 사용하기 때문)
+  src: url('./assets/fonts/tomorrow.eot');
+  src: url('./assets/fonts/tomorrow.eot#iefix') format('embedded-opentype'),
+    url('./assets/fonts/tomorrow.ttf') format('truetype'),
+    url('./assets/fonts/tomorrow.woff') format('woff'),
+    url('./assets/fonts/tomorrow.svg#tomorrow') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -10,11 +16,13 @@
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'tomorrow' !important;
+  // speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,73 +31,48 @@ i {
 .ic-bell:before {
   content: '\e900';
 }
-
 .ic-bookmark:before {
   content: '\e901';
 }
-
 .ic-bookmark-filled:before {
   content: '\e902';
 }
-
 .ic-caret:before {
   content: '\e903';
 }
-
 .ic-cart:before {
   content: '\e904';
 }
-
 .ic-check:before {
   content: '\e905';
 }
-
 .ic-chevron:before {
   content: '\e906';
 }
-
 .ic-close:before {
   content: '\e907';
 }
-
 .ic-community:before {
   content: '\e908';
 }
-
 .ic-expert:before {
   content: '\e909';
 }
-
 .ic-lock:before {
   content: '\e90a';
 }
-
 .ic-menu:before {
   content: '\e90b';
 }
-
 .ic-new:before {
   content: '\e90c';
 }
-
 .ic-search:before {
   content: '\e90d';
 }
-
 .ic-star:before {
   content: '\e90e';
 }
-
 .ic-store:before {
   content: '\e90f';
-}
-
-p {
-  color: black;
-  display: block;
-  text-transform: lowercase;
-}
-
-* {
-  font-family: 'Noto Sans KR', sans-serif;
 }
