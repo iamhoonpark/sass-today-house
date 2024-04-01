@@ -1,12 +1,5 @@
 @import './base/fonts';
-// package.json - script - sass 에서는 main.scss 파일만 읽기 때문에 fonts.scss 파일의 로드를 위한 import문
-
-p {
-  color: black;
-  display: block;
-  text-transform: lowercase;
-}
-
-* {
-  font-family: 'Noto Sans KR', sans-serif;
-}
+@import './base/normalize';
+@import './base/reset';
+// package.json - script - sass 에서는 main.scss 파일만 읽기 때문에 scss 파일들을 로드하기 위한 import문
+// fonts > normalize > reset 아래로 내려올 수록 스타일을 덮어씌움
