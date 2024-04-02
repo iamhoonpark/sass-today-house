@@ -1,5 +1,9 @@
+// import zone : 설정으로 인해 main.scss 파일만 읽기 때문에 scss파일 로드
+
+// 변수
+@import './constants/color';
+
+// 초기화
 @import './base/fonts';
 @import './base/normalize';
 @import './base/reset';
-// package.json - script - sass 에서는 main.scss 파일만 읽기 때문에 scss 파일들을 로드하기 위한 import문
-// fonts > normalize > reset 아래로 내려올 수록 스타일을 덮어씌움
