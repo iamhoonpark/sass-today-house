@@ -1,7 +1,8 @@
 // import zone : 설정으로 인해 main.scss 파일만 읽기 때문에 scss파일 로드
 
 // 변수
-@import './constants/color';
+@import './constants/colors';
+@import './constants/typography';
 
 // 초기화
 @import './base/fonts';
