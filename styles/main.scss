@@ -9,4 +9,8 @@
 @import './base/normalize';
 @import './base/reset';
 
+// mixins
+@import './mixins/text-style';
+
+// grid system
 @import './layouts/grids';
