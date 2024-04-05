@@ -1,19 +1,20 @@
 // import zone : 설정으로 인해 main.scss 파일만 읽기 때문에 scss파일 로드
 
-// 변수
+// constant
 @import './constants/colors';
 @import './constants/typography';
 @import './constants/breakpoints';
 
-// 초기화
+// reset
 @import './base/fonts';
 @import './base/normalize';
 @import './base/reset';
 
-// mixins
+// mixin
 @import './mixins/text-style';
 @import './mixins/responsive';
 @import './mixins/positions';
+@import './mixins/flexbox';
 
 // grid system
 @import './layouts/grids';

@@ -1,0 +1,35 @@
+// Map(== Object from JS)
+$flex-map: (
+  start: flex-start,
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  stretch: stretch,
+  center: center,
+);
+
+// 값을 축약하기 위한 함수
+@function _get-flex-value($key) {
+  // if절을 줄이기 위해 sass가 제공하는 map-get 내장함수를 사용하여 값의 축약형을 받아옴(1st param: map, 2nd param: key)
+  @return map-get($flex-map, $key);
+}
+
+// 재사용 가능한 믹시인
+@mixin flexbox($jc: center, $ai: center) {
+  display: flex;
+  align-items: _get-flex-value($ai);
+  justify-content: _get-flex-value($jc);
+}
+
+@mixin inline-flexbox($jc: center, $ai: center) {
+  display: inline-flex;
+  align-items: _get-flex-value($ai);
+  justify-content: _get-flex-value($jc);
+}
+
+@mixin column-flexbox($jc: center, $ai: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: _get-flex-value($ai);
+  justify-content: _get-flex-value($jc);
+}
