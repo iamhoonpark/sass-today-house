@@ -3,6 +3,7 @@
 // 변수
 @import './constants/colors';
 @import './constants/typography';
+@import './constants/breakpoints';
 
 // 초기화
 @import './base/fonts';
@@ -11,6 +12,7 @@
 
 // mixins
 @import './mixins/text-style';
+@import './mixins/responsive';
 
 // grid system
 @import './layouts/grids';
