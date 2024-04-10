@@ -1,0 +1,80 @@
+%page-item-base {
+  @include inline-flexbox;
+  @include text-style(16, $primary);
+  height: 26px;
+  font-weight: 700;
+  background-color: $white;
+  border-radius: 4px;
+}
+
+.pagination {
+  @include flexbox;
+
+  .page-control {
+    @extend %page-item-base;
+    width: 26px;
+    border: 1px solid $border;
+
+    &.page-prev {
+      // prev, next 버튼이 항상 존재할 경우 ol에 margin 제공, 그러나 없을 수도 있기 때문에 각 prev, next 버튼에 마진을 제공
+      margin-right: 24px;
+
+      .ic-chevron {
+        transform: rotate(90deg);
+      }
+    }
+
+    &.page-next {
+      margin-left: 24px;
+
+      .ic-chevron {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    .ic-chevron {
+      font-size: 20px;
+    }
+  }
+
+  .page-list {
+    @include flexbox;
+  }
+
+  .page-item {
+    margin-right: 4px;
+
+    &.is-active {
+      a,
+      button {
+        color: $white !important;
+        background-color: $blue;
+
+        /* hover 할 때, 폰트색상 흰색으로 하는 방법 or !important
+        &:hover {
+          color: $white;
+        }
+        */
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a,
+    button {
+      @extend %page-item-base;
+      min-width: 26px; // pageNo가 9999일 경우를 대비
+      padding: 0 4px;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
